@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Альфа-Банк — главная</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="/" aria-label="Альфа-Банк">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12 4c-1.5 0-2 .9-2.4 2L6 16h2.5l.7-2h5.6l.7 2H18L14.4 6c-.4-1.1-.9-2-2.4-2zm0 3.4l2 5.6H10l2-5.6zM4 18h16v2H4z"/></svg>
+        </span>
+      </a>
+      <button class="header__burger" aria-label="Меню" id="burger"><span></span><span></span><span></span></button>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list"></ul>
+        <div class="mobile-nav-container" style="display:none">
+          <div class="mobile-switch"></div>
+          <div class="mobile-sections-list"></div>
+        </div>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" aria-label="Поиск">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+        <button class="btn btn--ghost">Стать клиентом</button>
+        <button class="btn btn--primary">Войти</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="overlay"></div>
+  <div class="dropdown">
+    <div class="container dropdown__container">
+      <div class="dropdown__titles" data-nav-titles></div>
+      <div class="dropdown__content" data-nav-content></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <a href="#" class="card hero__deposit">
+            <div class="hero__deposit-text">
+              <h2 class="hero__title">Альфа-Вклад</h2>
+              <p class="hero__sub">Успейте получить 22% годовых —<br/>только до 31 мая</p>
+              <span class="btn btn--primary hero__btn">Открыть вклад</span>
+            </div>
+            <div class="hero__percent" aria-hidden="true">
+              <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ff7a30"/><stop offset=".25" stop-color="#ffd84a"/>
+                    <stop offset=".5" stop-color="#4ad991"/><stop offset=".75" stop-color="#2bb6ff"/>
+                    <stop offset="1" stop-color="#c25cff"/>
+                  </linearGradient>
+                  <linearGradient id="rainbowDark" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#cc5a18"/><stop offset=".5" stop-color="#1f8a5a"/><stop offset="1" stop-color="#7a3ad6"/>
+                  </linearGradient>
+                  <filter id="glow"><feGaussianBlur stdDeviation="4"/></filter>
+                </defs>
+                <text x="20" y="240" font-family="Inter,sans-serif" font-weight="800" font-size="280" font-style="italic" fill="url(#rainbow)" letter-spacing="-15">22%</text>
+                <text x="22" y="242" font-family="Inter,sans-serif" font-weight="800" font-size="280" font-style="italic" fill="url(#rainbowDark)" letter-spacing="-15" opacity=".4" filter="url(#glow)">22%</text>
+              </svg>
+            </div>
+          </a>
+
+          <a href="#" class="card hero__credit">
+            <h3 class="card__title">Кредитная карта</h3>
+            <div class="hero__credit-art" aria-hidden="true">
+              <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="cardRed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5a3a"/><stop offset="1" stop-color="#b21d12"/></linearGradient>
+                  <radialGradient id="floor1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3a1a1a"/><stop offset="1" stop-color="#3a1a1a" stop-opacity="0"/></radialGradient>
+                </defs>
+                <ellipse cx="100" cy="140" rx="80" ry="14" fill="url(#floor1)"/>
+                <g transform="translate(60 30) rotate(-8)"><rect width="90" height="115" rx="10" fill="url(#cardRed)"/><text x="14" y="92" font-family="Inter" font-size="62" font-weight="800" fill="#fff">A</text></g>
+                <g transform="translate(140 30)"><circle cx="20" cy="20" r="20" fill="#ffd84a"/><circle cx="13" cy="16" r="3" fill="#0a0a0a"/><circle cx="27" cy="16" r="3" fill="#0a0a0a"/><path d="M11 25 Q20 32 29 25" stroke="#0a0a0a" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+                <circle cx="38" cy="68" r="10" fill="#ff7a30"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="#" class="card hero__invest">
+            <h3 class="card__title">Инвестируйте<br/>и зарабатывайте</h3>
+            <div class="hero__invest-art" aria-hidden="true">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="arrowOrange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb04a"/><stop offset="1" stop-color="#ef5a18"/></linearGradient>
+                  <linearGradient id="arrowSide" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cc4818"/><stop offset="1" stop-color="#ef5a18"/></linearGradient>
+                  <radialGradient id="floor2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#001020" stop-opacity=".7"/><stop offset="1" stop-color="#001020" stop-opacity="0"/></radialGradient>
+                </defs>
+                <ellipse cx="100" cy="178" rx="76" ry="12" fill="url(#floor2)"/>
+                <g transform="translate(40 30)"><path d="M0 100 L60 40 L60 60 L100 60 L100 100 Z" fill="url(#arrowOrange)"/><path d="M0 100 L0 110 L100 110 L100 100 Z" fill="url(#arrowSide)"/><path d="M60 40 L70 30 L70 50 L60 60 Z" fill="#ffb04a" opacity=".8"/></g>
+                <circle cx="40" cy="50" r="6" fill="#4ad991"/><circle cx="160" cy="40" r="4" fill="#ff7ac9"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="#" class="card hero__cash">
+            <h3 class="card__title-sm">Кредит наличными</h3>
+            <div class="hero__cash-art" aria-hidden="true">
+              <svg viewBox="0 0 140 110" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="char" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ff8a3a"/><stop offset="1" stop-color="#b21d12"/></radialGradient></defs>
+                <ellipse cx="70" cy="98" rx="50" ry="6" fill="#1a0a0a" opacity=".5"/>
+                <ellipse cx="70" cy="55" rx="44" ry="40" fill="url(#char)"/>
+                <circle cx="56" cy="48" r="5" fill="#fff"/><circle cx="84" cy="48" r="5" fill="#fff"/>
+                <circle cx="58" cy="48" r="2.5" fill="#0a0a0a"/><circle cx="86" cy="48" r="2.5" fill="#0a0a0a"/>
+                <path d="M58 70 Q70 78 82 70" stroke="#0a0a0a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <g fill="#ffd84a"><path d="M20 20 l3 6 6 3 -6 3 -3 6 -3-6 -6-3 6-3z"/><path d="M120 30 l2 4 4 2 -4 2 -2 4 -2-4 -4-2 4-2z"/></g>
+              </svg>
+            </div>
+          </a>
+
+          <a href="#" class="card hero__free">
+            <h3 class="card__title-sm">Бесплатная<br/>Альфа-Карта</h3>
+            <div class="hero__free-art" aria-hidden="true">
+              <svg viewBox="0 0 140 110" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="phoneG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1a1a1a"/></linearGradient>
+                  <linearGradient id="phoneScreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a30"/><stop offset="1" stop-color="#ef3124"/></linearGradient>
+                </defs>
+                <ellipse cx="70" cy="100" rx="40" ry="5" fill="#000" opacity=".5"/>
+                <g transform="translate(50 8)"><rect width="50" height="92" rx="9" fill="url(#phoneG)"/><rect x="3" y="3" width="44" height="86" rx="6" fill="url(#phoneScreen)"/><text x="13" y="55" font-family="Inter" font-size="32" font-weight="800" fill="#fff" opacity=".95">A</text></g>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--products" id="products">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Выбирайте лучшее</h2>
+          <div class="tabs" data-tabs="products">
+            <button class="tabs__item is-active" data-tab="all">Для всех</button>
+            <button class="tabs__item" data-tab="business">Малому бизнесу</button>
+            <button class="tabs__item" data-tab="corp">Крупному бизнесу</button>
+          </div>
+        </div>
+        <div class="products" id="products-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--cashback">
+      <div class="container">
+        <div class="cashback">
+          <div class="cashback__text">
+            <h2 class="cashback__title">Наши клиенты получают<br/>повышенный кэшбэк<br/>у партнёров</h2>
+            <p class="cashback__desc">Каждый месяц мы собираем для вас выгодные предложения партнёров — скидки на продукты, одежду, технику, развлечения, образование и не только. Станьте клиентом и заполучите кэшбэк.</p>
+            <a href="#" class="btn btn--primary cashback__btn">Стать клиентом</a>
+          </div>
+          <div class="cashback__phone-wrap">
+            <div class="cashback__chips">
+              <span class="cashback__chip is-active">подбор</span>
+              <span class="cashback__chip">по кредиткам</span>
+            </div>
+            <div class="phone">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <h3 class="phone__title">Кэшбэк<br/>и сервисы</h3>
+                <div class="phone__balance"><span class="phone__balance-label">Баланс</span><span class="phone__balance-amount">5 678 ₽</span></div>
+                <div class="phone__art" aria-hidden="true">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs><radialGradient id="phArt" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#ff8a3a"/><stop offset="1" stop-color="#ef3124"/></radialGradient></defs>
+                    <circle cx="50" cy="60" r="36" fill="url(#phArt)"/>
+                    <path d="M70 50 L110 30 L110 50 L140 50 L140 90 L70 90 Z" fill="#ef3124"/>
+                    <path d="M110 30 L120 22 L120 42 L110 50 Z" fill="#ff7a30"/>
+                  </svg>
+                </div>
+                <div class="phone__nav"><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services">
+      <div class="container">
+        <h2 class="section__title">Сервисы</h2>
+        <div class="services">
+          <div class="service service--currency">
+            <div class="service__head">
+              <h3 class="service__title">Курсы валют</h3>
+              <div class="toggle">
+                <button class="toggle__item is-active">Наличные</button>
+                <button class="toggle__item">Безналичные</button>
+              </div>
+            </div>
+            <table class="rates">
+              <thead><tr><th>валюта</th><th>продать</th><th>купить</th></tr></thead>
+              <tbody>
+                <tr><td><span class="flag flag--us"></span><span><b>USD</b><small>Доллар США</small></span></td><td>76,1</td><td>74,9</td></tr>
+                <tr><td><span class="flag flag--eu"></span><span><b>EUR</b><small>Евро</small></span></td><td>91</td><td>10,6</td></tr>
+                <tr><td><span class="flag flag--cn"></span><span><b>CNY</b><small>Китайский юань</small></span></td><td>11,1</td><td>11,4</td></tr>
+              </tbody>
+            </table>
+            <a href="#" class="service__link">Больше валют →</a>
+            <p class="service__note">Информация о курсах не является публичной офертой. Точные значения — в Альфа-Онлайн.</p>
+          </div>
+          <a href="#" class="service service--row"><div><h4 class="service__title-sm">Отделения и банкоматы</h4><p class="service__desc">Найдите ближайшие к вам</p></div><span class="svc-icon svc-icon--pin" aria-hidden="true"><svg viewBox="0 0 56 56"><defs><radialGradient id="ic1" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ff8a3a"/><stop offset="1" stop-color="#a01810"/></radialGradient></defs><path d="M28 6c-9 0-16 7-16 16 0 11 16 28 16 28s16-17 16-28c0-9-7-16-16-16z" fill="url(#ic1)"/><circle cx="28" cy="22" r="6" fill="#fff"/></svg></span></a>
+          <a href="#" class="service service--row"><div><h4 class="service__title-sm">Платежи и переводы</h4><p class="service__desc">Без комиссии</p></div><span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 56 56"><defs><linearGradient id="ic2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fe39a"/><stop offset="1" stop-color="#1a8d54"/></linearGradient></defs><rect x="6" y="14" width="44" height="30" rx="5" fill="url(#ic2)"/><rect x="6" y="22" width="44" height="6" fill="#0a3a20" opacity=".6"/><circle cx="42" cy="38" r="4" fill="#fff" opacity=".7"/></svg></span></a>
+          <a href="#" class="service service--row"><div><h4 class="service__title-sm">Недвижимость</h4><p class="service__desc">Сделка под ключ</p></div><span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 56 56"><defs><linearGradient id="ic3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a3a"/><stop offset="1" stop-color="#a01810"/></linearGradient></defs><polygon points="10,46 10,28 28,14 46,28 46,46" fill="url(#ic3)"/><rect x="22" y="32" width="12" height="14" fill="#fff" opacity=".25"/></svg></span></a>
+          <a href="#" class="service service--support"><div><h4 class="service__title-sm">Поддержка</h4><p class="service__desc">Робот или оператор</p></div><span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 56 56"><defs><radialGradient id="ic4" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ff8ad4"/><stop offset="1" stop-color="#c63a8e"/></radialGradient></defs><path d="M10 24c0-8 8-14 18-14s18 6 18 14-8 14-18 14c-2 0-4 0-6-1l-8 6 1-9c-3-3-5-7-5-10z" fill="url(#ic4)"/></svg></span></a>
+          <a href="#" class="service service--samoz"><div><h4 class="service__title-sm">Самозанятость</h4><p class="service__desc service__desc--light">Доходы и налоги в одном приложении</p></div><span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 56 56"><defs><linearGradient id="ic5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a3a"/><stop offset="1" stop-color="#a01810"/></linearGradient></defs><rect x="12" y="8" width="32" height="42" rx="4" fill="url(#ic5)"/><rect x="18" y="16" width="20" height="2.5" fill="#fff" opacity=".6"/><rect x="18" y="22" width="20" height="2.5" fill="#fff" opacity=".6"/><rect x="18" y="28" width="14" height="2.5" fill="#fff" opacity=".6"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--offers">
+      <div class="container">
+        <h2 class="section__title">Выгодные предложения в сервисах</h2>
+        <div class="tabs tabs--offers">
+          <button class="tabs__item is-active"><span class="tabs__dot tabs__dot--red"></span>Альфа-Мобайл</button>
+          <button class="tabs__item"><span class="tabs__dot tabs__dot--orange"></span>Альфа-Тревел</button>
+          <button class="tabs__item"><span class="tabs__dot tabs__dot--green"></span>Афиша</button>
+          <button class="tabs__item"><span class="tabs__dot tabs__dot--orange"></span>Заправки</button>
+          <button class="tabs__item"><span class="tabs__dot tabs__dot--green"></span>Подарки</button>
+          <button class="tabs__item"><span class="tabs__dot tabs__dot--red"></span>Страхование</button>
+        </div>
+        <div class="offers">
+          <a href="#" class="offer offer--sim">
+            <div class="offer__text"><h3 class="offer__title">Альфа-выгодная связь</h3><p class="offer__desc">12 ГБ, 500 мин — за 350₽</p></div>
+            <div class="offer__art">
+              <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="simG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a30"/><stop offset="1" stop-color="#a01810"/></linearGradient>
+                  <linearGradient id="simChip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd84a"/><stop offset="1" stop-color="#cc8a18"/></linearGradient>
+                  <linearGradient id="hand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9b8"/><stop offset="1" stop-color="#d49870"/></linearGradient>
+                </defs>
+                <ellipse cx="120" cy="186" rx="84" ry="8" fill="#000" opacity=".18"/>
+                <path d="M40 180 L70 100 Q80 80 100 90 L150 130 Q170 145 160 170 L150 188 L40 188 Z" fill="url(#hand)"/>
+                <g transform="translate(70 50) rotate(-12)"><rect width="120" height="86" rx="10" fill="url(#simG)"/><rect x="14" y="20" width="34" height="44" rx="4" fill="url(#simChip)"/><line x1="14" y1="32" x2="48" y2="32" stroke="#a06010" stroke-width="1.5"/><line x1="14" y1="44" x2="48" y2="44" stroke="#a06010" stroke-width="1.5"/><line x1="14" y1="56" x2="48" y2="56" stroke="#a06010" stroke-width="1.5"/><line x1="31" y1="20" x2="31" y2="64" stroke="#a06010" stroke-width="1.5"/></g>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="offer offer--internet">
+            <div class="offer__text"><h3 class="offer__title">Безлимитный интернет</h3><p class="offer__desc">Бесплатно с тарифом «Лайт»</p></div>
+            <div class="offer__art">
+              <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="bubR" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ff8a3a"/><stop offset="1" stop-color="#a01810"/></radialGradient>
+                  <radialGradient id="bubG" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#5fe39a"/><stop offset="1" stop-color="#1a8d54"/></radialGradient>
+                  <radialGradient id="bubP" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ff8ad4"/><stop offset="1" stop-color="#7e3aaa"/></radialGradient>
+                  <radialGradient id="bubO" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ffb04a"/><stop offset="1" stop-color="#cc6a18"/></radialGradient>
+                </defs>
+                <ellipse cx="200" cy="206" rx="140" ry="10" fill="#000" opacity=".15"/>
+                <circle cx="190" cy="120" r="78" fill="url(#bubR)"/>
+                <circle cx="120" cy="150" r="40" fill="url(#bubP)"/><text x="105" y="160" font-family="Inter" font-size="22" font-weight="800" fill="#fff">%</text>
+                <circle cx="100" cy="100" r="32" fill="url(#bubG)"/><text x="78" y="108" font-family="Inter" font-size="18" font-weight="800" fill="#fff">GB</text>
+                <circle cx="270" cy="78" r="34" fill="url(#bubO)"/><text x="248" y="86" font-family="Inter" font-size="16" font-weight="800" fill="#fff">∞</text>
+                <circle cx="290" cy="160" r="30" fill="url(#bubP)"/>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="offer offer--cta"><span>Оформить сим</span><span class="offer__cta-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--about">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">О банке</h2>
+          <div class="tabs">
+            <button class="tabs__item is-active">Достижения</button>
+            <button class="tabs__item">Работа в Альфе</button>
+          </div>
+        </div>
+        <div class="about">
+          <a href="#" class="about__card about__card--employer">
+            <h3 class="about__title">Альфа-Банк — лучший работодатель России</h3>
+            <p class="about__desc about__desc--light">Третий год подряд по версии HeadHunter</p>
+            <div class="about__art">
+              <svg viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="hhG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a3a"/><stop offset="1" stop-color="#a01810"/></linearGradient>
+                  <linearGradient id="podium" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ef3124"/><stop offset="1" stop-color="#7a1010"/></linearGradient>
+                  <radialGradient id="coinG" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ffe184"/><stop offset="1" stop-color="#c08820"/></radialGradient>
+                </defs>
+                <ellipse cx="180" cy="226" rx="160" ry="10" fill="#000" opacity=".5"/>
+                <rect x="60" y="170" width="80" height="55" fill="url(#podium)"/>
+                <rect x="140" y="130" width="80" height="95" fill="url(#podium)"/>
+                <rect x="220" y="160" width="80" height="65" fill="url(#podium)"/>
+                <text x="148" y="180" font-family="Inter" font-size="50" font-weight="800" fill="#fff" letter-spacing="-3">hh</text>
+                <g transform="translate(78 130)"><rect width="46" height="36" rx="4" fill="#fff"/><text x="14" y="28" font-family="Inter" font-size="22" font-weight="800" fill="#ef3124">A</text></g>
+                <circle cx="240" cy="148" r="14" fill="url(#coinG)"/><circle cx="262" cy="142" r="10" fill="url(#coinG)"/><circle cx="62" cy="158" r="11" fill="url(#coinG)"/>
+                <g fill="#ffd84a"><path d="M30 80 l3 6 6 3 -6 3 -3 6 -3-6 -6-3 6-3z"/><path d="M320 50 l3 6 6 3 -6 3 -3 6 -3-6 -6-3 6-3z"/></g>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="about__card about__card--biggest">
+            <h3 class="about__title">Крупнейший частный банк</h3>
+            <ul class="about__stats">
+              <li><b>19 млн</b><span>клиентов</span></li>
+              <li><b>800+</b><span>офисов</span></li>
+              <li><b>2500</b><span>городов</span></li>
+            </ul>
+            <div class="about__art about__art--coin">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="bigCoin" cx=".4" cy=".3" r=".7"><stop offset="0" stop-color="#ffe184"/><stop offset=".6" stop-color="#d4a040"/><stop offset="1" stop-color="#a07418"/></radialGradient></defs>
+                <circle cx="60" cy="60" r="50" fill="url(#bigCoin)"/>
+                <circle cx="60" cy="60" r="42" fill="none" stroke="#a07418" stroke-width="2" opacity=".5"/>
+                <text x="38" y="78" font-family="Inter" font-size="50" font-weight="800" fill="#7a4810">A</text>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="about__card about__card--reviews">
+            <h3 class="about__title">Отзывы</h3>
+            <p class="about__desc">Стремимся стать лучше каждый день</p>
+            <div class="about__art about__art--star">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="starG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a30"/><stop offset="1" stop-color="#a01810"/></linearGradient>
+                  <linearGradient id="aCard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5a3a"/><stop offset="1" stop-color="#a01810"/></linearGradient>
+                </defs>
+                <polygon points="50,8 62,38 94,42 70,64 78,96 50,80 22,96 30,64 6,42 38,38" fill="url(#starG)"/>
+                <g transform="translate(56 50) rotate(8)"><rect width="44" height="58" rx="6" fill="url(#aCard)"/><text x="14" y="42" font-family="Inter" font-size="28" font-weight="800" fill="#fff">A</text></g>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>© Альфа-Банк, 1990–2026</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
