@@ -171,7 +171,8 @@ async function loadProducts() {
 function renderProducts(products, category) {
   const container = document.getElementById('products-grid');
   if (!container) return;
-  const filtered = products.filter(p => category === 'all' || p.categories.includes(category));
+  const filtered = products.filter(p => p.categories.includes(category));
+
   container.innerHTML = filtered.map(p =>
     `<a href="#" class="product" data-categories="${p.categories.join(' ')}">
       <div class="product__text"><h3 class="product__title">${p.title}</h3><p class="product__desc">${p.desc}</p></div>
